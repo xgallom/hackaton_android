@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">hackaton_android</string>
+    <string name="title_activity_info__input">Info_Input</string>
 </resources>
