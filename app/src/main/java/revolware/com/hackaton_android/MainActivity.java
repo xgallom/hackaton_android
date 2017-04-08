@@ -1,10 +1,12 @@
 package revolware.com.hackaton_android;
 
+import android.content.Intent;
 import android.content.IntentFilter;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
+import revolware.com.hackaton_android.activities.Search;
 import revolware.com.hackaton_android.data_access.notification.NotificationReceiver;
 import revolware.com.hackaton_android.data_access.notification.NotificationScheduler;
 
@@ -25,6 +27,10 @@ public class MainActivity extends AppCompatActivity {
         getApplicationContext().registerReceiver(receiver, filterLock);
 //        getApplicationContext().registerReceiver(receiver, filterNet);
         NotificationScheduler.startScheduling(getApplicationContext());
+
+        Intent i = new Intent(MainActivity.this, Search.class);
+        startActivity(i);
+        finish();
     }
 
     @Override
