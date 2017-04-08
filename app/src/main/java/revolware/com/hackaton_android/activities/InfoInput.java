@@ -1,13 +1,11 @@
 package revolware.com.hackaton_android.activities;
 
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.annotation.StyleRes;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -15,8 +13,6 @@ import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import java.text.DateFormatSymbols;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -32,6 +28,33 @@ public class InfoInput extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_input);
+
+        Typeface robotolight = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Light.ttf");
+        Typeface robotothin = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Thin.ttf");
+        Typeface robotobold = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Bold.ttf");
+
+
+        Button type1 = (Button) findViewById(R.id.buttonType1);
+        Button type2 = (Button) findViewById(R.id.buttonType2);
+        Button type3 = (Button) findViewById(R.id.buttonType3);
+        TextView tx = (TextView)findViewById(R.id.text);
+        TextView leave1 = (TextView) findViewById(R.id.departText);
+        final TextView leave2 = (TextView) findViewById(R.id.leaveDateText);
+        TextView arrive1 = (TextView) findViewById(R.id.arriveText);
+        final TextView arrive2 = (TextView) findViewById(R.id.arriveDateText);
+
+        TextView location = (TextView) findViewById(R.id.location);
+
+        tx.setTypeface(robotolight);
+        type1.setTypeface(robotolight);
+        type2.setTypeface(robotolight);
+        type3.setTypeface(robotolight);
+        location.setTypeface(robotothin);
+        leave1.setTypeface(robotobold);
+        leave2.setTypeface(robotolight);
+        arrive1.setTypeface(robotobold);
+        arrive2.setTypeface(robotolight);
+
 
         LinearLayout departButton = (LinearLayout) findViewById(R.id.depart);
         LinearLayout arriveButton = (LinearLayout) findViewById(R.id.arrive);
