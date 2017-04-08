@@ -6,7 +6,9 @@ package revolware.com.hackaton_android.data_access;
 
 public enum WebApiRefs {
     RSS_FEED("feed/list?dateFrom={dateFrom}"),
-    COUNTRY("countries");
+    COUNTRY("countries"),
+    RISK("riskplan")
+    ;
 
     private URI uri;
     private WebApiRefs(String uri){

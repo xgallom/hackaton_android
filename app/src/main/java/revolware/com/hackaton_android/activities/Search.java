@@ -16,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import revolware.com.hackaton_android.R;
@@ -47,6 +48,7 @@ public class Search extends AppCompatActivity {
 
         final AppCompatActivity activity = this;
 
+        countries = new ArrayList<>();
         adapter = new ArrayAdapter<String>(getApplicationContext(),
                 android.R.layout.simple_dropdown_item_1line);
         textView.setAdapter(adapter);
@@ -96,7 +98,8 @@ public class Search extends AppCompatActivity {
 
     public void accept(String data)
     {
-        if(countries.isEmpty())
+        Log.e("DEBUG_GALLO", data == null ? "null" : "not null");
+        if(countries.isEmpty() || data.isEmpty())
             return;
 
         for(int n = 0; n < countries.size(); n++)
