@@ -15,6 +15,7 @@ public class info_input extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_input);
 
+
         LinearLayout ln = (LinearLayout) this.findViewById(R.id.main);
 
         LinearLayout linLay = new LinearLayout(this);
