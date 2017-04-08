@@ -31,31 +31,8 @@
             android:textColor="@android:color/white"
             android:textSize="40sp" />
 
-        <Button
-            android:id="@+id/from"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/textView4"
-            android:layout_marginLeft="95dp"
-            android:layout_marginStart="95dp"
-            android:layout_marginTop="10dp"
-            android:text="Button" />
-
-        <Button
-            android:id="@+id/to"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/from"
-            android:layout_alignBottom="@+id/from"
-            android:layout_alignLeft="@+id/from"
-            android:layout_alignStart="@+id/from"
-            android:layout_marginLeft="80dp"
-            android:layout_marginStart="80dp"
-            android:text="Button" />
-
         <LinearLayout
+            android:id="@+id/linearLayout2"
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_alignParentBottom="true"
@@ -64,6 +41,80 @@
             android:gravity="bottom"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView" />
+
+            <Button
+                android:id="@+id/button14"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button13"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/button12"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:text="Button" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/linearLayout2"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/from"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linearLayout2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/textView4"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/to"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/linearLayout2"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/textView4"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:text="Button" />
         </LinearLayout>
 
     </RelativeLayout>

@@ -27,7 +27,7 @@ public class Search extends AppCompatActivity {
                 Intent i = new Intent(Search.this, info_input.class);
                 i.putExtra("location" ,editText.getText());
                 startActivity(i);
-                finish();
+
             }
         });
     }

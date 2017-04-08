@@ -14,6 +14,8 @@ import android.widget.DatePicker;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import java.text.DateFormatSymbols;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 import revolware.com.hackaton_android.R;
@@ -30,6 +32,13 @@ public class info_input extends AppCompatActivity {
 
         fromButt = (Button) findViewById(R.id.from);
         toButt = (Button) findViewById(R.id.to);
+
+        Calendar c = Calendar.getInstance();
+
+        fromButt.setText("Leave");
+        toButt.setText("Arrive");
+       // fromButt.setText(c.get(Calendar.DAY_OF_MONTH) + c.get(Calendar.MONTH) + c.get(Calendar.YEAR));
+       // toButt.setText(c.get(Calendar.DAY_OF_MONTH) + c.get(Calendar.MONTH) + c.get(Calendar.YEAR));
 
         fromButt.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +96,7 @@ public class info_input extends AppCompatActivity {
 
             Button fromButt = (Button) getActivity().findViewById(R.id.from);
 
-            fromButt.setText(day + "." + (month + 1) + "." + year);
+            fromButt.setText("Leave\n"+day + "." + getMonth(month) + "." + year);
 
 
 
@@ -112,13 +121,19 @@ public class info_input extends AppCompatActivity {
 
             public void onDateSet(DatePicker view, int year, int month, int day) {
 
+                Calendar cal=Calendar.getInstance();
+                SimpleDateFormat month_date = new SimpleDateFormat("MMMM");
+                String month_name = month_date.format(cal.getTime());
 
                 Button toButt = (Button) getActivity().findViewById(R.id.to);
 
-                toButt.setText(day + "." + (month + 1) + "." + year);
+                toButt.setText("Arrive\n"+day + "." + getMonth(month) + "." + year);
 
 
             }
         }
 
+    public static String getMonth(int month) {
+        return new DateFormatSymbols().getMonths()[month];
+    }
 }
