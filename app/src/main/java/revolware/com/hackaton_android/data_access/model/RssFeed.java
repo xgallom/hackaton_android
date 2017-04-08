@@ -6,6 +6,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Date;
+import java.util.List;
 
 import static revolware.com.hackaton_android.data_access.model.RssFeed.e_type.e_critical;
 import static revolware.com.hackaton_android.data_access.model.RssFeed.e_type.e_notice;
@@ -152,7 +153,20 @@ public class RssFeed {
 
     @Override
     public String toString() {
-        return getTitle();
+        String rv = getTitle();
+
+        String[] words = rv.split(" ");
+
+        rv = "";
+        for(int n = 0; n < words.length; n++) {
+            rv += words[n];
+            if((n + 1) % 5 == 0)
+                rv += "\n";
+            else
+                rv += " ";
+        }
+
+        return rv;
     }
 
     public static String typeToStr(final e_type type)
