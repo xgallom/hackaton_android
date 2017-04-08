@@ -1,5 +1,7 @@
 package revolware.com.hackaton_android.data_access.http;
 
+import android.util.Log;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -48,6 +50,7 @@ public class GET {
                 String response = new String(); String line;
                 while( (line = reader.readLine()) != null )
                     response += line;
+
                 return response;
             }else{
                 //Get response body

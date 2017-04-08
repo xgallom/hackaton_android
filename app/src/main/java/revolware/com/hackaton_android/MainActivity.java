@@ -19,14 +19,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.e("DEBUG_GALLO", "onCreate");
-
-        receiver = new NotificationReceiver();
-        filterLock  = new IntentFilter("android.intent.action.SCREEN_ON");
-//        filterNet   = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
-        getApplicationContext().registerReceiver(receiver, filterLock);
-//        getApplicationContext().registerReceiver(receiver, filterNet);
-        NotificationScheduler.startScheduling(getApplicationContext());
+        NotificationScheduler scheduler = new NotificationScheduler();
+        scheduler.execute(getApplicationContext(), true);
 
         Intent i = new Intent(MainActivity.this, Search.class);
         startActivity(i);
@@ -36,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onDestroy()
     {
-        Log.e("DEBUG_GALLO", "onDestroy");
-//        getApplicationContext().unregisterReceiver(receiver);
-
         super.onDestroy();
     }
 }

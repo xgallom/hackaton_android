@@ -1,5 +1,7 @@
 package revolware.com.hackaton_android.data_access.model;
 
+import android.util.Log;
+
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -21,7 +23,9 @@ public class RssFeed {
     };
 
     private String title;
+    private String desc;
     private String date;
+    private String link;
     private String location;
     private e_type type;
     private Double latitude;
@@ -36,6 +40,15 @@ public class RssFeed {
         this.title = title;
     }
 
+    public String getDesc()
+    {
+        return desc;
+    }
+    public void setDesc(String desc)
+    {
+        this.desc = desc;
+    }
+
     public String getDate()
     {
         return date;
@@ -43,6 +56,15 @@ public class RssFeed {
     public void setDate(String date)
     {
         this.date = date;
+    }
+
+    public String getLink()
+    {
+        return link;
+    }
+    public void setLink(String link)
+    {
+        this.link = link;
     }
 
     public String getLocation()
@@ -84,11 +106,46 @@ public class RssFeed {
     public static RssFeed fromJSONObject (JSONObject jsonObject) throws JSONException {
         RssFeed rv = new RssFeed();
 
-        rv.setTitle(jsonObject.getString("title"));
-        rv.setLocation(jsonObject.getString("location"));
+        try {
+            rv.setTitle(jsonObject.getString("title"));
+        } catch(JSONException e) {
+            rv.setTitle("");
+        }
+        try {
+        rv.setDesc(jsonObject.getString("description"));
+        } catch(JSONException e) {
+            rv.setDesc("");
+        }
+        try {
         rv.setDate(jsonObject.getString("date"));
+        } catch(JSONException e) {
+            rv.setDate("");
+        }
+        try {
+        rv.setLink(jsonObject.getString("link"));
+        } catch(JSONException e) {
+            rv.setLink("");
+        }
+        try {
+            rv.setLocation(jsonObject.getString("location"));
+        } catch(JSONException e) {
+            rv.setLocation("");
+        }
+        try {
+            rv.setType(strToType(jsonObject.getString("type")));
+        } catch(JSONException e) {
+            rv.setType(e_notice);
+        }
+        try {
         rv.setLatitude(jsonObject.getDouble("latitude"));
+        } catch(JSONException e) {
+            rv.setLatitude(0.0);
+        }
+        try {
         rv.setLongitude(jsonObject.getDouble("longitude"));
+        } catch(JSONException e) {
+            rv.setLongitude(0.0);
+        }
 
         return rv;
     }

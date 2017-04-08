@@ -1,6 +1,7 @@
 package revolware.com.hackaton_android.data_access.rssfeed;
 
 import android.content.Context;
+import android.os.Debug;
 import android.util.Log;
 
 import org.json.JSONArray;
@@ -61,10 +62,10 @@ public class RssFeedServerHandler extends Handler<RssFeed> {
         HashMap< String, String > headers = new HashMap<>();
         String response = null;
         try{
-            response = GET.getResponseBody(WebApiRefs.RSS_FEED.getURI(settings.getServer()), headers);
+            response = GET.getResponseBody(WebApiRefs.RSS_FEED.getURI(settings.getServer()).resolveTemplate("dateFrom", obj.getDate()), headers);
         } catch (ServerNotAvailableException e) {
             settings.switchServer();
-            response = GET.getResponseBody(WebApiRefs.RSS_FEED.getURI(settings.getServer()), headers);
+            response = GET.getResponseBody(WebApiRefs.RSS_FEED.getURI(settings.getServer()).resolveTemplate("dateFrom", obj.getDate()), headers);
         }
 
         try {
@@ -72,8 +73,9 @@ public class RssFeedServerHandler extends Handler<RssFeed> {
 
             JSONArray jsonArray = new JSONArray(response);
 
-            for(int i = 0; i < jsonArray.length(); i++)
-                retval.add( RssFeed.fromJSONObject(jsonArray.getJSONObject(i)) );
+            for(int i = 0; i < jsonArray.length(); i++) {
+                retval.add(RssFeed.fromJSONObject(jsonArray.getJSONObject(i)));
+            }
 
             return retval;
         } catch (JSONException e) {
