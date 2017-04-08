@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Guidana</string>
     <string name="title_activity_info__input">Info_Input</string>
+    <string name="title_activity_location">LocationActivity</string>
 </resources>
