@@ -11,7 +11,8 @@ public class AssetedTypeface {
     private static Typeface
             robotolight = null,
             robotothin  = null,
-            robotobold  = null;
+            robotobold  = null,
+            robotomedium = null;
     static AssetManager mgr = null;
 
     public static void setMgr(AssetManager m)
@@ -41,5 +42,13 @@ public class AssetedTypeface {
             robotobold = Typeface.createFromAsset(mgr,  "fonts/Roboto-Bold.ttf");
 
         return robotobold;
+    }
+
+    public static Typeface getRobotoMedium()
+    {
+        if(robotomedium == null)
+            robotomedium = Typeface.createFromAsset(mgr,  "fonts/Roboto-Medium.ttf");
+
+        return robotomedium;
     }
 }
