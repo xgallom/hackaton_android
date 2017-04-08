@@ -20,7 +20,7 @@ public class Search extends AppCompatActivity {
         setContentView(R.layout.activity_search);
 
         final EditText editText = (EditText) findViewById(R.id.editText2);
-        ImageButton butt = (ImageButton) findViewById(R.id.imageButton);
+        ImageButton butt = (ImageButton) findViewById(R.id.okButton);
         butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -37,15 +37,15 @@
         android:layout_centerHorizontal="true" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/okButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:background="@null"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/selector"
-        android:layout_below="@+id/editText2"
-        android:layout_centerHorizontal="true" />
+        app:srcCompat="@drawable/okbutton_selector" />
 
     <ImageView
         android:id="@+id/imageView2"

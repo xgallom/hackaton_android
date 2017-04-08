@@ -3,4 +3,8 @@
     <color name="colorPrimary">#6B6595</color>
     <color name="colorPrimaryDark">#6B6595</color>
     <color name="colorAccent">#6B6595</color>
+
+    <color name="colorEditText">#ffffff</color>
+    <color name="colorButton">#DEEBF7</color>
+    <color name="colorButtonPressed">#9BACC0</color>
 </resources>

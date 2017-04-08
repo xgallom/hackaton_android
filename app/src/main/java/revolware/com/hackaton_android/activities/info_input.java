@@ -30,13 +30,14 @@ public class info_input extends AppCompatActivity {
         setContentView(R.layout.activity_info_input);
         Num=0;
 
-        fromButt = (Button) findViewById(R.id.from);
-        toButt = (Button) findViewById(R.id.to);
 
+
+        LinearLayout fromButt = (LinearLayout) findViewById(R.id.depart);
+        LinearLayout toButt = (LinearLayout) findViewById(R.id.arrive);
         Calendar c = Calendar.getInstance();
 
-        fromButt.setText("Leave");
-        toButt.setText("Arrive");
+       // fromButt.setText("Leave");
+      //  toButt.setText("Arrive");
        // fromButt.setText(c.get(Calendar.DAY_OF_MONTH) + c.get(Calendar.MONTH) + c.get(Calendar.YEAR));
        // toButt.setText(c.get(Calendar.DAY_OF_MONTH) + c.get(Calendar.MONTH) + c.get(Calendar.YEAR));
 
@@ -94,9 +95,9 @@ public class info_input extends AppCompatActivity {
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
 
-            Button fromButt = (Button) getActivity().findViewById(R.id.from);
+            // fromButt = (Button) getActivity().findViewById(R.id.depart);
 
-            fromButt.setText("Leave\n"+day + "." + getMonth(month) + "." + year);
+           // fromButt.setText("Leave\n"+day + "." + getMonth(month) + "." + year);
 
 
 
@@ -125,9 +126,9 @@ public class info_input extends AppCompatActivity {
                 SimpleDateFormat month_date = new SimpleDateFormat("MMMM");
                 String month_name = month_date.format(cal.getTime());
 
-                Button toButt = (Button) getActivity().findViewById(R.id.to);
+               // Button toButt = (Button) getActivity().findViewById(R.id.to);
 
-                toButt.setText("Arrive\n"+day + "." + getMonth(month) + "." + year);
+               // toButt.setText("Arrive\n"+day + "." + getMonth(month) + "." + year);
 
 
             }

@@ -12,10 +12,10 @@
     <RelativeLayout
         android:id="@+id/main"
         android:layout_width="344dp"
-        android:layout_height="575dp"
+        android:layout_height="551dp"
         android:weightSum="1"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="-4dp">
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
 
         <TextView
             android:id="@+id/textView4"
@@ -36,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
             android:layout_alignParentRight="true"
             android:gravity="bottom"
             android:orientation="vertical">
@@ -79,6 +79,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/layHolder"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/linearLayout2"
@@ -87,34 +88,85 @@
             android:layout_alignParentRight="true"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/textView4"
+            android:layout_margin="0dp"
             android:gravity="center"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/from"
-                style="?android:attr/borderlessButtonStyle"
+            <LinearLayout
+                android:id="@+id/depart"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/linearLayout2"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView4"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/white"
-                android:text="Button" />
+                android:background="@drawable/selector"
+                android:clickable="true"
+                android:orientation="vertical">
 
-            <Button
-                android:id="@+id/to"
-                style="?android:attr/borderlessButtonStyle"
+                <ImageView
+                    android:id="@+id/departView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/departpic" />
+
+                <TextView
+                    android:id="@+id/departText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="LEAVE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/leaveDateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="LEAVE"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/arrive"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/linearLayout2"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_below="@+id/textView4"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/white"
-                android:text="Button" />
+                android:background="@drawable/selector"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/arriveView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    app:srcCompat="@drawable/arrivepic" />
+
+                <TextView
+                    android:id="@+id/arriveText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ARRIVE"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:id="@+id/arriveDateText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="ARRIVE"
+                    android:textAlignment="center" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </RelativeLayout>
