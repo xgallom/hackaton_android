@@ -9,6 +9,7 @@
     <color name="colorDatepickerAccent">#6B6595</color>
 
     <color name="colorEditText">#ffffff</color>
-    <color name="colorButton">#DEEBF7</color>
-    <color name="colorButtonPressed">#9BACC0</color>
+    <color name="colorButton">#9BACC0</color>
+    <color name="colorButtonPressed">#DEEBF7</color>
+    <color name="colorButtonBorder">#2c3e50</color>
 </resources>
