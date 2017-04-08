@@ -8,7 +8,7 @@
     tools:context="revolware.com.hackaton_android.activities.MainActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/countryTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -24,7 +24,7 @@
         android:id="@+id/textView3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/countryTextView"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
         android:layout_marginTop="15dp"
@@ -35,7 +35,7 @@
 
     <HorizontalScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="160dp"
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="11dp"
@@ -43,9 +43,10 @@
         android:id="@+id/horizontalScrollView">
 
         <LinearLayout
+            android:id="@+id/feedViewContainer"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:orientation="vertical" />
+            android:orientation="horizontal" />
     </HorizontalScrollView>
 
     <ScrollView
@@ -55,6 +56,7 @@
         android:layout_centerHorizontal="true">
 
         <LinearLayout
+            android:id="@+id/riskViewContainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" />

@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +21,7 @@ import java.util.Date;
 import revolware.com.hackaton_android.R;
 import revolware.com.hackaton_android.data_access.fonts.AssetedTypeface;
 
-public class InfoInput extends AppCompatActivity {
+public class InfoInputActivity extends AppCompatActivity {
     private String location;
     private Date
         dateArrive,
@@ -112,6 +111,15 @@ public class InfoInput extends AppCompatActivity {
                 dialogfragment.show(getFragmentManager(), "DatePickerDialogTheme");
             }
         });
+
+        type1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(InfoInputActivity.this, LocationActivity.class);
+                i.putExtra("location", location);
+                startActivity(i);
+            }
+        });
     }
 
 
@@ -158,7 +166,7 @@ public class InfoInput extends AppCompatActivity {
         }
 
         public void onDateSet(DatePicker view, int year, int month, int day) {
-            InfoInput ii = (InfoInput) getActivity();
+            InfoInputActivity ii = (InfoInputActivity) getActivity();
 
             Calendar c = Calendar.getInstance();
             c.set(year, month, day);

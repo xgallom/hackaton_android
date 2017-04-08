@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/backgroundscreen2"
-    tools:context="revolware.com.hackaton_android.activities.Search">
+    tools:context="revolware.com.hackaton_android.activities.SearchActivity">
 
     <TextView
         android:id="@+id/location"

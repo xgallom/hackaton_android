@@ -26,7 +26,7 @@ import revolware.com.hackaton_android.data_access.exception.ServerException;
 import revolware.com.hackaton_android.data_access.fonts.AssetedTypeface;
 import revolware.com.hackaton_android.data_access.model.Country;
 
-public class Search extends AppCompatActivity {
+public class SearchActivity extends AppCompatActivity {
     SearchView search;
     Button butt;
     private AutoCompleteTextView textView;
@@ -105,7 +105,7 @@ public class Search extends AppCompatActivity {
         for(int n = 0; n < countries.size(); n++)
             if(data.toLowerCase().equals(countries.get(n).toLowerCase()))
             {
-                Intent i = new Intent(Search.this, InfoInput.class);
+                Intent i = new Intent(SearchActivity.this, InfoInputActivity.class);
                 i.putExtra("location", countries.get(n));
                 startActivity(i);
                 return;

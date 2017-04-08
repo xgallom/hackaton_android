@@ -25,8 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.InfoInput" />
-        <activity android:name=".activities.Search" />
+        <activity android:name=".activities.InfoInputActivity" />
+        <activity android:name=".activities.SearchActivity" />
         <activity android:name=".activities.LocationActivity" />
     </application>
 
