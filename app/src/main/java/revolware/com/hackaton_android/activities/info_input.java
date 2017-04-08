@@ -1,10 +1,11 @@
 package revolware.com.hackaton_android.activities;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
 import android.widget.DatePicker;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
 import revolware.com.hackaton_android.R;
 
@@ -16,7 +17,7 @@ public class info_input extends AppCompatActivity {
         setContentView(R.layout.activity_info_input);
 
 
-        LinearLayout ln = (LinearLayout) this.findViewById(R.id.main);
+        RelativeLayout ln = (RelativeLayout) this.findViewById(R.id.main);
 
         LinearLayout linLay = new LinearLayout(this);
         linLay.setOrientation(LinearLayout.VERTICAL);

@@ -4,18 +4,68 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundscreen2"
     tools:context="revolware.com.hackaton_android.activities.info_input"
     tools:layout_editor_absoluteY="81dp"
     tools:layout_editor_absoluteX="0dp">
 
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/main"
-        android:layout_width="378dp"
-        android:layout_height="837dp"
-        android:orientation="horizontal"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="-1dp">
+        android:layout_width="367dp"
+        android:layout_height="575dp"
+        android:weightSum="1"
+        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteY="-4dp">
 
-    </LinearLayout>
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:gravity="center"
+            android:text="Paris"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
 
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="95dp"
+            android:layout_marginStart="95dp"
+            android:layout_marginTop="36dp"
+            android:text="Button"
+            android:layout_below="@+id/textView4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button"
+            android:layout_marginLeft="80dp"
+            android:layout_marginStart="80dp"
+            android:layout_alignBaseline="@+id/button2"
+            android:layout_alignBottom="@+id/button2"
+            android:layout_alignLeft="@+id/button2"
+            android:layout_alignStart="@+id/button2" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            style="@android:style/Widget.DatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:calendarTextColor="@android:color/white"
+            android:headerBackground="@android:color/transparent"
+            android:scaleX="1"
+            android:scaleY="1"
+            android:yearListSelectorColor="@android:color/white" />
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
