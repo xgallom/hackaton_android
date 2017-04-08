@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/selector"
-            android:text="Button" />
+            android:text="BUSINESS TRIP" />
 
         <Button
             android:id="@+id/buttonType2"
@@ -59,7 +59,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/selector"
-            android:text="Button" />
+            android:text="LEISURE TIME" />
 
         <Button
             android:id="@+id/buttonType3"
@@ -67,7 +67,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/selector"
-            android:text="Button" />
+            android:text="ACTIVE SPORTS" />
     </LinearLayout>
 
     <LinearLayout
