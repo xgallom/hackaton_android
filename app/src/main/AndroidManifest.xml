@@ -18,14 +18,14 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".activities.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.info_input" />
+        <activity android:name=".activities.InfoInput" />
         <activity android:name=".activities.Search"></activity>
     </application>
 

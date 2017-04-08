@@ -24,7 +24,7 @@ public class Search extends AppCompatActivity {
         butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(Search.this, info_input.class);
+                Intent i = new Intent(Search.this, InfoInput.class);
                 i.putExtra("location" ,editText.getText());
                 startActivity(i);
 

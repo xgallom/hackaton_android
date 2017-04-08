@@ -12,7 +12,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.DatePickerDialogStyle">
+    <style name="DatepickerDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
         <item name="colorPrimary">@color/colorDatepickerPrimary</item>
         <item name="colorPrimaryDark">@color/colorDatepickerPrimaryDark</item>
         <item name="colorAccent">@color/colorDatepickerAccent</item>
