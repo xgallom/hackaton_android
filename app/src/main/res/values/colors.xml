@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#6B6595</color>
     <color name="colorPrimaryDark">#6B6595</color>
-    <color name="colorAccent">#6B6595</color>
+    <color name="colorAccent">#6b6595</color>
 
     <color name="colorDatepickerPrimary">#DEEBF7</color>
     <color name="colorDatepickerPrimaryDark">#9BACC0</color>
