@@ -13,22 +13,22 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.util.List;
 
 import revolware.com.hackaton_android.R;
 import revolware.com.hackaton_android.data_access.RequestListener;
 import revolware.com.hackaton_android.data_access.country.CountryProvider;
 import revolware.com.hackaton_android.data_access.exception.ServerException;
+import revolware.com.hackaton_android.data_access.model.Country;
 
 public class Search extends AppCompatActivity {
     SearchView search;
     Button butt;
     private AutoCompleteTextView textView;
     private ArrayAdapter<String> adapter;
-    private String[] countries;
-    static final String[] data = {
-            "Russia",
-            "United States"
-    };
+    private List<String> countries;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,10 +38,10 @@ public class Search extends AppCompatActivity {
 
         textView = (AutoCompleteTextView) findViewById(R.id.searchText);
 
-        final AppCompatActivity a = this;
+        final AppCompatActivity activity = this;
 
         adapter = new ArrayAdapter<String>(getApplicationContext(),
-                android.R.layout.simple_dropdown_item_1line, data);
+                android.R.layout.simple_dropdown_item_1line);
         textView.setAdapter(adapter);
 
         new CountryProvider(getApplicationContext()).getAll(null, new RequestListener() {
@@ -52,22 +52,24 @@ public class Search extends AppCompatActivity {
 
             @Override
             public void onSuccess(Object obj) {
-/*                List<String> list = Country.toString((List<Country>) obj);
-
-                countries = new String[list.size()];
-                for(int n = 0; n < list.size(); n++)
-                    countries[n] = list.get(n);
+                countries = Country.toString((List<Country>) obj);
 
                 adapter.clear();
                 adapter.addAll(countries);
                 adapter.notifyDataSetChanged();
-  */          }
+            }
         });
 
         textView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
+                    activity.runOnUiThread(new Runnable() {
+                        @Override
+                        public void run() {
+                            accept(textView.getText().toString());
+                        }
+                    });
                     return true;
                 }
                 else {
@@ -80,15 +82,32 @@ public class Search extends AppCompatActivity {
         butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                accept(textView.getText().toString());
             }
         });
     }
 
-    private void accept(String data)
+    public void accept(String data)
     {
-        Intent i = new Intent(Search.this, InfoInput.class);
-        i.putExtra("location", data);
-        startActivity(i);
+        if(countries.isEmpty())
+            return;
+
+        for(int n = 0; n < countries.size(); n++)
+            if(data.equals(countries.get(n)))
+            {
+                Intent i = new Intent(Search.this, InfoInput.class);
+                i.putExtra("location", data);
+                startActivity(i);
+                return;
+            }
+
+        refuse();
+    }
+
+    public void refuse()
+    {
+        Toast.makeText(getApplicationContext(),
+                "Country not found.",
+                Toast.LENGTH_SHORT).show();
     }
 }
