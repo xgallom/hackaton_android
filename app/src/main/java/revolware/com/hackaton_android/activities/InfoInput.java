@@ -14,15 +14,11 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.Calendar;
-import java.util.Date;
 
 import revolware.com.hackaton_android.R;
 
 public class InfoInput extends AppCompatActivity {
-    LinearLayout departButton, arriveButton;
-    TextView location;
 
-    Date dateFrom, dateTo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,9 +35,9 @@ public class InfoInput extends AppCompatActivity {
         Button type3 = (Button) findViewById(R.id.buttonType3);
         TextView tx = (TextView)findViewById(R.id.text);
         TextView leave1 = (TextView) findViewById(R.id.departText);
-        final TextView leave2 = (TextView) findViewById(R.id.leaveDateText);
+        TextView leave2 = (TextView) findViewById(R.id.leaveDateText);
         TextView arrive1 = (TextView) findViewById(R.id.arriveText);
-        final TextView arrive2 = (TextView) findViewById(R.id.arriveDateText);
+        TextView arrive2 = (TextView) findViewById(R.id.arriveDateText);
 
         TextView location = (TextView) findViewById(R.id.location);
 
@@ -117,7 +113,9 @@ public class InfoInput extends AppCompatActivity {
         public void onDateSet(DatePicker view, int year, int month, int day) {
             TextView v = (TextView) getActivity().findViewById(target);
 
+
             v.setText(String.valueOf(day) + "." + String.valueOf(month) + "." + String.valueOf(year));
+            v.setTextSize(22);
         }
     }
 }
