@@ -3,6 +3,7 @@ package revolware.com.hackaton_android.activities;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -50,6 +51,9 @@ public class InfoInput extends AppCompatActivity {
         leave2.setTypeface(robotolight);
         arrive1.setTypeface(robotobold);
         arrive2.setTypeface(robotolight);
+
+        Intent i = getIntent();
+        location.setText(i.getStringExtra("location"));
 
 
         LinearLayout departButton = (LinearLayout) findViewById(R.id.depart);

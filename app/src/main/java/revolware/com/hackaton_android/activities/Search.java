@@ -1,6 +1,7 @@
 package revolware.com.hackaton_android.activities;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.SearchView;
@@ -35,6 +36,11 @@ public class Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 //        setTheme(android.R.style.Theme);
         setContentView(R.layout.activity_search);
+
+        Typeface robotolight = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Light.ttf");
+        TextView tx = (TextView) findViewById(R.id.textView2);
+        tx.setTypeface(robotolight);
+
 
         textView = (AutoCompleteTextView) findViewById(R.id.searchText);
 
