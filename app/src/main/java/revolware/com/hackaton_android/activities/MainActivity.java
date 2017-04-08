@@ -23,11 +23,12 @@ public class MainActivity extends AppCompatActivity {
         new NotificationScheduler(new NotificationListener() {
             @Override
             public void onNotificationSchedulerFinished() {
-                Intent i = new Intent(MainActivity.this, Search.class);
-                startActivity(i);
-                finish();
             }
         }).execute(getApplicationContext(), true);
+
+        Intent i = new Intent(MainActivity.this, Search.class);
+        startActivity(i);
+        finish();
     }
 
     @Override

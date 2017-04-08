@@ -100,10 +100,10 @@ public class Search extends AppCompatActivity {
             return;
 
         for(int n = 0; n < countries.size(); n++)
-            if(data.equals(countries.get(n)))
+            if(data.toLowerCase().equals(countries.get(n).toLowerCase()))
             {
                 Intent i = new Intent(Search.this, InfoInput.class);
-                i.putExtra("location", data);
+                i.putExtra("location", countries.get(n));
                 startActivity(i);
                 return;
             }
