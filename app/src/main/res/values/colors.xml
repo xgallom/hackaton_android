@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#6B6595</color>
     <color name="colorAccent">#6B6595</color>
 
+    <color name="colorDatepickerPrimary">#6B6595</color>
+    <color name="colorDatepickerPrimaryDark">#6B6595</color>
+    <color name="colorDatepickerAccent">#6B6595</color>
+
     <color name="colorEditText">#ffffff</color>
     <color name="colorButton">#DEEBF7</color>
     <color name="colorButtonPressed">#9BACC0</color>
