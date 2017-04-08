@@ -17,18 +17,19 @@ import android.widget.TextView;
 import java.util.Calendar;
 
 import revolware.com.hackaton_android.R;
+import revolware.com.hackaton_android.data_access.fonts.AssetedTypeface;
 
 public class InfoInput extends AppCompatActivity {
-
+    private String location;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_input);
 
-        Typeface robotolight = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Light.ttf");
-        Typeface robotothin = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Thin.ttf");
-        Typeface robotobold = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Bold.ttf");
+        Typeface robotolight = AssetedTypeface.getRobotolight();
+        Typeface robotothin = AssetedTypeface.getRobotothin();
+        Typeface robotobold = AssetedTypeface.getRobotobold();
 
 
         Button type1 = (Button) findViewById(R.id.buttonType1);
@@ -40,20 +41,21 @@ public class InfoInput extends AppCompatActivity {
         TextView arrive1 = (TextView) findViewById(R.id.arriveText);
         TextView arrive2 = (TextView) findViewById(R.id.arriveDateText);
 
-        TextView location = (TextView) findViewById(R.id.location);
+        TextView locationView = (TextView) findViewById(R.id.location);
 
         tx.setTypeface(robotolight);
         type1.setTypeface(robotolight);
         type2.setTypeface(robotolight);
         type3.setTypeface(robotolight);
-        location.setTypeface(robotothin);
+        locationView.setTypeface(robotothin);
         leave1.setTypeface(robotobold);
         leave2.setTypeface(robotolight);
         arrive1.setTypeface(robotobold);
         arrive2.setTypeface(robotolight);
 
         Intent i = getIntent();
-        location.setText(i.getStringExtra("location"));
+        location = i.getStringExtra("location");
+        locationView.setText(location);
 
 
         LinearLayout departButton = (LinearLayout) findViewById(R.id.depart);
@@ -117,8 +119,7 @@ public class InfoInput extends AppCompatActivity {
         public void onDateSet(DatePicker view, int year, int month, int day) {
             TextView v = (TextView) getActivity().findViewById(target);
 
-
-            v.setText(String.valueOf(day) + "." + String.valueOf(month) + "." + String.valueOf(year));
+            v.setText(String.valueOf(day) + "." + String.valueOf(month +1) + "." + String.valueOf(year));
             v.setTextSize(22);
         }
     }

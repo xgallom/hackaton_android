@@ -22,6 +22,7 @@ import revolware.com.hackaton_android.R;
 import revolware.com.hackaton_android.data_access.RequestListener;
 import revolware.com.hackaton_android.data_access.country.CountryProvider;
 import revolware.com.hackaton_android.data_access.exception.ServerException;
+import revolware.com.hackaton_android.data_access.fonts.AssetedTypeface;
 import revolware.com.hackaton_android.data_access.model.Country;
 
 public class Search extends AppCompatActivity {
@@ -37,7 +38,7 @@ public class Search extends AppCompatActivity {
 //        setTheme(android.R.style.Theme);
         setContentView(R.layout.activity_search);
 
-        Typeface robotolight = Typeface.createFromAsset(getAssets(),  "fonts/Roboto-Light.ttf");
+        Typeface robotolight = AssetedTypeface.getRobotolight();
         TextView tx = (TextView) findViewById(R.id.textView2);
         tx.setTypeface(robotolight);
 
