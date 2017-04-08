@@ -11,6 +11,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
+
+        <receiver android:name=".data_access.notification.NotificationReceiver">
+            <intent-filter>
+                <action android:name="NOTIFICATION_SCHEDULER" />
+            </intent-filter>
+        </receiver>
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
