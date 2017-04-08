@@ -9,18 +9,20 @@
     tools:context="revolware.com.hackaton_android.activities.Search">
 
 
-    <EditText
-        android:id="@+id/editText2"
+    <AutoCompleteTextView
+        android:id="@+id/searchText"
         android:layout_width="320dp"
         android:layout_height="45dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="@drawable/edit_text_drawable"
-        android:ems="10"
         android:fadingEdge="horizontal|vertical"
         android:gravity="center"
         android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
         android:textCursorDrawable="@null"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        />
 
     <TextView
         android:id="@+id/textView2"
@@ -33,14 +35,14 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="@android:color/white"
         android:textSize="22sp"
-        android:layout_alignBottom="@+id/editText2"
+        android:layout_alignBottom="@+id/searchText"
         android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:id="@+id/okButton"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:layout_below="@+id/editText2"
+        android:layout_below="@+id/searchText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="24dp"
         android:background="@null"

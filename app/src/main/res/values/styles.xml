@@ -18,6 +18,10 @@
         <item name="colorAccent">@color/colorDatepickerAccent</item>
     </style>
 
+    <style name="PopupTheme" parent="Theme.AppCompat.Light">
+
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
