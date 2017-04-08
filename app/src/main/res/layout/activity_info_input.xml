@@ -11,10 +11,10 @@
 
     <RelativeLayout
         android:id="@+id/main"
-        android:layout_width="367dp"
+        android:layout_width="344dp"
         android:layout_height="575dp"
         android:weightSum="1"
-        tools:layout_editor_absoluteX="-3dp"
+        tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="-4dp">
 
         <TextView
@@ -32,43 +32,39 @@
             android:textSize="40sp" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/from"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView4"
             android:layout_marginLeft="95dp"
             android:layout_marginStart="95dp"
             android:layout_marginTop="10dp"
-            android:text="Button"
-            android:layout_below="@+id/textView4"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:text="Button" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/to"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button"
+            android:layout_alignBaseline="@+id/from"
+            android:layout_alignBottom="@+id/from"
+            android:layout_alignLeft="@+id/from"
+            android:layout_alignStart="@+id/from"
             android:layout_marginLeft="80dp"
             android:layout_marginStart="80dp"
-            android:layout_alignBaseline="@+id/button2"
-            android:layout_alignBottom="@+id/button2"
-            android:layout_alignLeft="@+id/button2"
-            android:layout_alignStart="@+id/button2" />
+            android:text="Button" />
 
-        <FrameLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="320dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_below="@+id/button2"
-            android:layout_marginTop="8dp">
+            android:layout_height="300dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:gravity="bottom"
+            android:orientation="vertical">
 
-            <DatePicker
-                android:id="@+id/datePicker2"
-                style="@android:style/Widget.DatePicker"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </FrameLayout>
+        </LinearLayout>
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
