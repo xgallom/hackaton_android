@@ -18,16 +18,23 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".activities.MainActivity">
+        <activity android:name=".activities.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activities.InfoInputActivity" />
-        <activity android:name=".activities.SearchActivity" />
-        <activity android:name=".activities.LocationActivity" />
+        <activity android:name=".activities.InfoInputActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activities.SearchActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".activities.LocationActivity"
+            android:screenOrientation="portrait"
+            />
     </application>
 
 </manifest>
