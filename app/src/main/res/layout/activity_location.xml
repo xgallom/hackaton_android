@@ -64,11 +64,14 @@
 
     <Button
         android:id="@+id/finishButton"
-        android:layout_width="260dp"
-        android:layout_height="45dp"
+        android:layout_width="240dp"
+        android:layout_height="51dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
-        android:text="BUY INSURENCE" />
+        android:layout_marginBottom="17dp"
+        android:text="BUY INSURANCE"
+        android:textSize="21sp"
+        android:textColor="@android:color/white"
+        android:background="@drawable/selector_finish"/>
 
 </RelativeLayout>

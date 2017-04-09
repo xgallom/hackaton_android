@@ -16,4 +16,7 @@
     <color name="colorRssFeedView">#D9DBEB</color>
     <color name="colorRiskChanceView1">#26D9DBEB</color>
     <color name="colorRiskChanceView2">#33D9DBEB</color>
+    
+    <color name="colorFinishButtonStart">#907CCA</color>
+    <color name="colorFinishButtonEnd">#587BD8</color>
 </resources>
