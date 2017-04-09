@@ -42,14 +42,14 @@ public class NotificationScheduler extends AsyncTask<Object, Void, Void> {
 
         NotificationReceiver receiver = new NotificationReceiver();
 
-//        IntentFilter filterLock  = new IntentFilter("android.intent.action.SCREEN_ON");
-//        context.registerReceiver(receiver, filterLock);
+        IntentFilter filterLock  = new IntentFilter("android.intent.action.SCREEN_ON");
+        context.registerReceiver(receiver, filterLock);
 //        filterNet   = new IntentFilter("android.net.conn.CONNECTIVITY_CHANGE");
 //        getApplicationContext().registerReceiver(receiver, filterNet);
 
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, notifIntent, 0);
+//        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, notifIntent, 0);
 
-        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis() + MS_DELAY, MS_DELAY, pendingIntent);
+//        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP,  System.currentTimeMillis() + MS_DELAY, MS_DELAY, pendingIntent);
     }
 
     public static void stopScheduling(Context context) {

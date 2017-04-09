@@ -1,5 +1,6 @@
 package revolware.com.hackaton_android.views;
 
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ImageView;
@@ -43,10 +44,52 @@ public class RiskChanceView extends CustomView<RiskChance> {
         percentageTextView.setText(String.valueOf(obj.getChance()) + " %");
 
         ImageView threatIcon = (ImageView) rv.findViewById(R.id.iconImageView);
-       // threatIcon.setImageDrawable(drawable.);
+        threatIcon.setImageDrawable(rv.getResources().getDrawable(getIconIdFromType(obj), null));
+
 
 
         return rv;
+    }
+
+    public int getIconIdFromType(RiskChance obj)
+    {
+        switch(obj.getRisk().getKey())
+        {
+            case "active_threat":
+                return R.drawable.activethreat;
+
+            case "bomb_threat":
+                return R.drawable.bombthreat;
+
+            case "civil_unrest":
+                return R.drawable.civilunrest;
+
+            case "earthquake":
+                return R.drawable.earthquake;
+
+            case "evacuation":
+                return R.drawable.evacuation;
+
+            case "fire":
+                return R.drawable.fire;
+
+            case "hazardous_materials":
+                return R.drawable.hazard;
+
+            case "pandemic_flu":
+                return R.drawable.pandemicflu;
+
+            case "severe_weather":
+                return R.drawable.severeweather;
+
+            case "suspicious_package":
+                return R.drawable.suspiciouspackage;
+
+            case "utility_failure":
+                return R.drawable.utilityfailure;
+        }
+
+        return R.drawable.ic_critical;
     }
 
 }
