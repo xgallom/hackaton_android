@@ -11,7 +11,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import revolware.com.hackaton_android.R;
@@ -56,10 +55,16 @@ public class LocationActivity extends AppCompatActivity {
         Typeface robotothin      = AssetedTypeface.getRobotothin();
         Typeface robotobold      = AssetedTypeface.getRobotobold();
 
+
+
         TextView countryTextView = (TextView) findViewById(R.id.countryTextView);
+        TextView newsTextView = (TextView) findViewById(R.id.newsText);
         Button finishButton = (Button) findViewById(R.id.finishButton);
 
         finishButton.setTypeface(robotobold);
+        countryTextView.setTypeface(robotothin);
+        newsTextView.setTypeface(robotolight);
+
 
         Intent i = getIntent();
         country = i.getStringExtra("location");
