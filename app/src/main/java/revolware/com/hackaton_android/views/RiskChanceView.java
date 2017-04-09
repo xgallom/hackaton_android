@@ -2,6 +2,7 @@ package revolware.com.hackaton_android.views;
 
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import revolware.com.hackaton_android.R;
@@ -19,6 +20,7 @@ public class RiskChanceView extends CustomView<RiskChance> {
     {
         super(inf);
         iteration = 0;
+
     }
 
     @Override
@@ -39,6 +41,10 @@ public class RiskChanceView extends CustomView<RiskChance> {
 
         nameTextView.setText(obj.getRisk().getName());
         percentageTextView.setText(String.valueOf(obj.getChance()) + " %");
+
+        ImageView threatIcon = (ImageView) rv.findViewById(R.id.iconImageView);
+       // threatIcon.setImageDrawable(drawable.);
+
 
         return rv;
     }
