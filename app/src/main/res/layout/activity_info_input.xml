@@ -22,7 +22,7 @@
         android:layout_marginTop="30dp"
         android:gravity="center"
         android:text="Bangladesh"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorTextDefault"
         android:textSize="48sp" />
 
     <LinearLayout
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="42dp"
             android:gravity="top|center"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorTextDefault"
             android:textSize="20sp"
             android:visibility="visible" />
 
@@ -52,7 +52,7 @@
             android:layout_marginBottom="35dp"
             android:gravity="top|center"
             android:text="Trip type:"
-            android:textColor="@android:color/white"
+            android:textColor="@color/colorTextDefault"
             android:textSize="25sp" />
 
         <Button
@@ -63,6 +63,7 @@
             android:background="@drawable/selector"
             android:text="BUSINESS TRIP"
             android:onClick="listenHard"
+            android:textColor="@color/colorTextDefaultDark"
             android:textSize="16sp" />
 
         <Button
@@ -73,6 +74,7 @@
             android:background="@drawable/selector"
             android:onClick="listenHard"
             android:text="LEISURE TIME"
+            android:textColor="@color/colorTextDefaultDark"
             android:textSize="16sp" />
 
         <Button
@@ -83,6 +85,7 @@
             android:background="@drawable/selector"
             android:onClick="listenHard"
             android:text="ACTIVE SPORTS"
+            android:textColor="@color/colorTextDefaultDark"
             android:textSize="16sp" />
     </LinearLayout>
 
@@ -127,6 +130,7 @@
                 android:gravity="center"
                 android:text="LEAVE"
                 android:textAlignment="center"
+                android:textColor="@color/colorTextDefaultDark"
                 android:textSize="18sp" />
 
             <TextView
@@ -138,6 +142,7 @@
                 android:gravity="top|center"
                 android:text="(pick date)"
                 android:textAlignment="center"
+                android:textColor="@color/colorTextDefaultDark"
                 android:textSize="16sp" />
 
         </LinearLayout>
@@ -170,6 +175,7 @@
                 android:gravity="center"
                 android:text="ARRIVE"
                 android:textAlignment="center"
+                android:textColor="@color/colorTextDefaultDark"
                 android:textSize="18sp" />
 
             <TextView
@@ -181,6 +187,7 @@
                 android:gravity="top|center"
                 android:text="(pick date)"
                 android:textAlignment="center"
+                android:textColor="@color/colorTextDefaultDark"
                 android:textSize="16sp" />
 
         </LinearLayout>

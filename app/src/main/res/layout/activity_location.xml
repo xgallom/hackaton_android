@@ -16,7 +16,7 @@
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="Paris"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorTextDefault"
         android:textSize="48sp" />
 
     <TextView
@@ -29,7 +29,7 @@
         android:layout_marginTop="15dp"
         android:gravity="center"
         android:text="Latest news:"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorTextDefault"
         android:textSize="25sp" />
 
     <HorizontalScrollView
@@ -64,14 +64,15 @@
 
     <Button
         android:id="@+id/finishButton"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="240dp"
         android:layout_height="51dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="17dp"
+        android:layout_marginBottom="21dp"
+        android:background="@drawable/selector_finish"
         android:text="BUY INSURANCE"
-        android:textSize="21sp"
-        android:textColor="@android:color/white"
-        android:background="@drawable/selector_finish"/>
+        android:textColor="@color/colorTextDefault"
+        android:textSize="21sp" />
 
 </RelativeLayout>

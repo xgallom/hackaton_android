@@ -29,7 +29,7 @@
         android:layout_toEndOf="@+id/iconImageView"
         android:layout_toRightOf="@+id/iconImageView"
         android:text="TextView"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorTextDefault"
         android:textSize="18sp" />
 
     <TextView
@@ -41,6 +41,6 @@
         android:layout_centerVertical="true"
         android:layout_marginRight="15dp"
         android:text="TextView"
-        android:textColor="@android:color/white"
+        android:textColor="@color/colorTextDefault"
         android:textSize="36sp" />
 </RelativeLayout>
