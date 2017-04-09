@@ -12,4 +12,8 @@
     <color name="colorButton">#9BACC0</color>
     <color name="colorButtonPressed">#DEEBF7</color>
     <color name="colorButtonBorder">#2c3e50</color>
+
+    <color name="colorRssFeedView">#D9DBEB</color>
+    <color name="colorRiskChanceView1">#26D9DBEB</color>
+    <color name="colorRiskChanceView2">#33D9DBEB</color>
 </resources>

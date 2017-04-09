@@ -1,6 +1,7 @@
 package revolware.com.hackaton_android.data_access.risk;
 
 import android.content.Context;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -61,10 +62,10 @@ public class RiskServerHandler extends Handler<Risk> {
         HashMap< String, String > headers = new HashMap<>();
         String response = null;
         try{
-            response = GET.getResponseBody(WebApiRefs.COUNTRY.getURI(settings.getServer()), headers);
+            response = GET.getResponseBody(WebApiRefs.RISK.getURI(settings.getServer()), headers);
         } catch (ServerNotAvailableException e) {
             settings.switchServer();
-            response = GET.getResponseBody(WebApiRefs.COUNTRY.getURI(settings.getServer()), headers);
+            response = GET.getResponseBody(WebApiRefs.RISK.getURI(settings.getServer()), headers);
         }
 
         try {
