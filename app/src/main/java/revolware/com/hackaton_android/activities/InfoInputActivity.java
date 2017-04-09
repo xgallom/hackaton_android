@@ -112,16 +112,16 @@ public class InfoInputActivity extends AppCompatActivity {
             }
         });
 
-        type1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent i = new Intent(InfoInputActivity.this, LocationActivity.class);
-                i.putExtra("location", location);
-                startActivity(i);
-            }
-        });
+
+
     }
 
+    public void listenHard(View view)
+    {
+        Intent i = new Intent(InfoInputActivity.this, LocationActivity.class);
+        i.putExtra("location", location);
+        startActivity(i);
+    }
 
     public void addView(LinearLayout main){
         LinearLayout linLay = new LinearLayout(this); // layout for text fields
