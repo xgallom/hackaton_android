@@ -20,7 +20,7 @@
         android:textSize="48sp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/newsText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/countryTextView"
@@ -35,7 +35,7 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:layout_below="@+id/textView3"
+        android:layout_below="@+id/newsText"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="11dp"
         android:paddingBottom="20dp"
